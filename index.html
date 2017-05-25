@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<title>Portfolio website</title>
+	<title>Portfolio</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-
-	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 	
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -70,6 +68,23 @@
     line-height: 35px;
     padding: 0 40px;
 }
+.work-info {
+    padding: 10px;
+}
+.work-info p {
+    color: white;
+    padding-bottom: 10px;
+}
+.work-info h3 {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.carousel-inner {
+  min-height: 140px;
+}
+
 </style>
 <!-- works -->
 <div id="about" class="portfolio spacer" style="background-color: #eee">
@@ -97,41 +112,44 @@
 	<ul class="grid effect-2" id="grid">
 		<li><img alt="portfolio" src="images/work/msg.jpg" alt="" width="556">
             <div class="overlay animated fadeIn">
-                <span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> MusicSupervisorGuide</a></span>
-            </div>
-            <div style="display: none">
-                <p>Frontend: catalog of supervisors and projects, profile (w/ editing)</p>
-                <p>Backend: manage of members and membership plans, view members activity, application settings</p>
-                <p>&nbsp;</p>
-                <p>Also used: PayPal IPN, Google Analytics (Measurement Protocol), Integrating with one Affiliate application, Amazon S3 (backup DB by application)</p>
+<!--                <span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> MusicSupervisorGuide</a></span> -->
+                <div class="work-info">
+                    <h3>MusicSupervisorGuide</h3>
+                    <p>Frontend: catalog of supervisors and projects, profile (w/ editing)</p>
+                    <p>Backend: manage of members and membership plans, view members activity, application settings</p>
+                    <p>Also used: PayPal IPN, Google Analytics (Measurement Protocol), Integrating with one Affiliate application, Amazon S3 (backup DB by application)</p>
+                </div>
             </div>
         </li>
 		<li><img alt="portfolio" src="images/work/mho.png" alt="" width="556">
             <div class="overlay animated fadeIn">
-                <span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> Playlist/Song system</a></span>
-            </div>
-            <div style="display: none">
-                <p>The project helps the user to manage his songs</p>
-                <p>&nbsp;</p>
-                <p>Used: Node.js, PostgreSQL, AWS S3, AngularJS, Mandrill API</p>
+                <!--<span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> Playlist/Song system</a></span>-->
+                <div class="work-info">
+                    <h3>Playlist/Song system</h3>
+                    <p>The project helps the user to manage his songs</p>
+                    <p>&nbsp;</p>
+                    <p>Used: Node.js, PostgreSQL, AWS S3, AngularJS, Mandrill API</p>
+                </div>
             </div>
         </li>
 		<li><img alt="portfolio" src="images/work/trade.png" alt="" width="556">
             <div class="overlay animated fadeIn">
-                <span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> A Service for Traders & Investors</a></span>
-            </div>
-            <div style="display: none">
-                <p>Used: Node.js/Sails.js, MongoDB, Redis, AngularJS, Mandrill API, Stripe API, Pusher API</p>
+                <!--<span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> A Service for Traders & Investors</a></span>-->
+                <div class="work-info">
+                    <h3>A Service for Traders & Investors</h3>
+                    <p>Used: Node.js/Sails.js, MongoDB, Redis, AngularJS, Mandrill API, Stripe API, Pusher API</p>
+                </div>
             </div>
         </li>
 		<li><img alt="portfolio" src="images/work/mnh.png" alt="" width="556">
             <div class="overlay animated fadeIn">
-                <span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> Customer Communication Platform</a></span>
-            </div>
-            <div style="display: none">
-                <p>The project helps the teams in an internet business to communicate with customers, personally, at scale—on your website, inside web and mobile apps, and by email.</p>
-                <p>&nbsp;</p>
-                <p>App messenger uses socket.io</p>
+                <!--<span class="animated bounceIn"><a href="" target="_blank"><i class="fa fa-link"></i> Customer Communication Platform</a></span>-->
+                <div class="work-info">
+                    <h3>Customer Communication Platform</h3>
+                    <p>The project helps the teams in an internet business to communicate with customers, personally, at scale—on your website, inside web and mobile apps, and by email.</p>
+                    <p>&nbsp;</p>
+                    <p>App messenger uses socket.io</p>
+                </div>
             </div>
         </li>
 	</ul>
@@ -190,10 +208,11 @@
 			<div class="col-sm-offset-3 col-sm-6 contact-form">		
 			<h3>Contact</h3>
 			<p>I am available for Freelancing work and collaboration.</p>
-			<form  >
-			<input type="text" name="form_name" class="form-control" placeholder="Name" >
-			<input type="email"  name="form_email" class="form-control" placeholder="Email">
-			<textarea name="form_message" class="form-control" placeholder="Message" rows="5"></textarea>
+            <p id="cnote" style="display: none">Thanks for your message</p>
+			<form id="cform" >
+			<input type="text" name="form_name" class="form-control" placeholder="Name" required >
+			<input type="email"  name="form_email" class="form-control" placeholder="Email" required>
+			<textarea name="form_message" class="form-control" placeholder="Message" rows="5" required></textarea>
 			<input type="submit"  name="Submit" class="btn btn-primary btn-lg" value="Submit">
 			</form>
 			</div>

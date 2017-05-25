@@ -5,25 +5,49 @@
       });
 
       function handleResize() {
-      var h = $(window).height();
-      $('.fullpage').css({'height':h+'px'});
+        var h = $(window).height();
+        $('.fullpage').css({'height':h+'px'});
       }
       $(function(){
-      handleResize();
+        handleResize();
 
-      $(window).resize(function(){
-      handleResize();
+        $(window).resize(function(){
+        handleResize();
       });
       });
 
-
-
-      jQuery(document).ready(function($) {
- 
-    $(".scroll").click(function(event){   
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800,'swing');
-    });
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){   
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800,'swing');
+        });
+        /*
+        setTimeout(function () {
+            // jQuery('.carousel').carousel();
+            jQuery('#carousel-testimonials').carousel();
+        }, 5000);
+        */
+        
+        $('#cform').submit(function (e) {
+            e.preventDefault();
+            
+             $.ajax({
+                type: "POST",
+                url: 'http://www.webstart.in.ua/c/cform.php',
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
+                //dataType: 'json',
+                data: $(this).serialize(), // serializes the form's elements.
+            }).done(function(data) {
+                $('#cform')[0].reset();
+                $("#cform").trigger('reset');
+                $('#cnote').show();
+                console.log(data); // show response from the php script.
+            }).fail(function(data) {
+                console.log(data); // show response from the php script.
+            });
+        });
     });
 
 
